@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREAKING NEWS</title>
+ <!-- Bootstrap Icons -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ <!-- bootstrap link -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+ <!-- font awesome link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <!-- Custom CSS -->
+ <link rel="stylesheet" href="styles.css">
+ <style>
+    .bottom {
+        margin-bottom: 15px;
+        background-color: white;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+<!-- Navbar start -->
+<section class="container mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a style="color: red;" class="navbar-brand ms-3" href="index.html">
+            <img src="image/logo.jpg" alt="" width="60" height="40"> <b>BREAKING NEWS</b>  
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <form class="d-flex me-3">
+              <a class="nav-link" href="#"><b>News</b></a>
+              <a class="navbar-brand" href="#">
+                <img src="image/profile.jpg" alt="" width="40" height="30">
+              </a>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <hr>
+</section>
+<!-- Navbar end -->
+<!-- Header section start -->
+<header>
+    <!-- News Category Section start-->
+    <section class="container mb-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="news-category" class="navbar-nav gap-4 mx-auto mb-2 mb-lg-0">
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+    </section>
+    <!-- News Category Section end-->
+    <!--Length Section start  -->
+    <section>
+        <div class="container mb-5">
+          <div class="bg-light">
+            <p><span id="categoty-length" class="me-3 ms-3"></span>items found for category</p>
+          </div>
+        </div>
+    </section>
+    <!--Length Section end  -->
+    <!-- Short By view section start -->
+    <section>
+        <div class="container mb-5">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Sort By View: </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item dropdown">
+                    <form>
+                      <select id="dropdown-news-category">
+                      </select>
+                    </form>
+                    <ul id="dropdown-category" class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex gap-2">
+                  <button type="button" class="btn btn-primary">Today’s Pick</button>
+                  <button type="button" class="btn btn-outline-primary btn-light">Trending</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </section>
+    <!-- Short By view section end -->
+</header>
+<!-- Header section end -->
+<!-- Main section -->
+    <main>
+        <section>
+            <div class="container">
+                <div class="card mb-12 py-3 px-4 bg-light" id="cateoryDetailModalLabel">
+                </div>
+            </div>
+        </section>
+<!-- qustion answer section -->
+        <section id="qustionanswer" class="container-lg text-center pt-5 mt-3 mt-md-5 mb-5">
+            <div class="container">
+                <div class="card">
+                    <h1 class="fw-bold">Frequently Asked Questions</h1>
+                    <p class="fs-5 my-3">Answers to the basics of Javascript</p>
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col-12 col-lg-8 text-start">
+                            <div class="accordion mb-5" id="accordionExample">
+                                <div class="accordion-item mb-1 border rounded">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button rounded fw-bold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            What are the differences between arrow functions and regular functions?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Syntactical differences this value (execution context) Usage as methods
+                                            Usage as constructors arguments binding.
+                                            Due to arrow functions not defining their own execution context, they're not
+                                            well-suited for usage as methods. However, thanks to the Class fields
+                                            proposal, arrow functions can be used as methods inside classes, if your
+                                            environment supports it.Another difference is the binding of the arguments
+                                            object.
+                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-1 border rounded">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed rounded fw-bold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Difference between forEach,Map,Filter and pine?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            forEach(), is used to execute the same code on every element in an array but
+                                            does not change the array and it returns undefined. <br>map() executes the
+                                            same
+                                            code on every element in an array and returns a new array with the updated
+                                            elements. <br>filter() checks every element in an array to see if it meets a
+                                            certain criteria and returns a new array with the elements that return
+                                            truthy for the criteria.<br>
+                                            Pine is a lightweight JavaScript AST Parser for Node. js. Initially created
+                                            to power Cortex's JavaScript to C# class transpiler
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mb-1 border rounded">
+                                    <h2 class="accordion-header " id="headingThree">
+                                        <button class="accordion-button collapsed rounded fw-bold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Difference between Var,Let,Const ?
+
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Answer-In JavaScript, there are some differences between var, let, and const
+                                            variable declarations.
+
+                                            The scope of variables declared with the var and const keywords is the
+                                            current function body.
+
+                                            The var keyword declares variables that are hoisted.
+                                            Hoisting describes the ability to access a variable in its surrounding scope
+                                            even before it has been declared.
+
+                                            Let-declared variables are block-scoped, which means that they only apply to
+                                            the current block in which they are declared.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="phoneDetailModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="phone-details" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer section start -->
+<footer id="" class="container-fluid text-bg-dark text-center p-5 mt-5">
+    <h3 style="color:white;">BREAKING NEWS</h3>
+    <p class="mt-3">Noakhali, Bangladesh</p>
+    <a href="#" class="mx-2 text-white">Privacy Policy </a>|<a href="#" class="mx-2 text-white"> Terms of use</a>
+    <div class="d-flex align-items-center justify-content-center gap-5 my-4">
+      <a href="https://www.facebook.com/mdnahidulislamnabil.official/" target="_blank" class="text-white fs-3"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/webnabil/" target="_blank" class="text-white fs-3"><i
+           class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/webnabil" target="_blank" class="text-white fs-3"><i
+          class="bi bi-github"></i></a>
+    </div>
+    <p class="text-light fs-6">©2022. Md Nahidul Islam Nabil</p>
+</footer>
+<!-- Footer section end -->
+<!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS link -->
+    <script src="JS/test.js"></script>
+</body>
+</html>
